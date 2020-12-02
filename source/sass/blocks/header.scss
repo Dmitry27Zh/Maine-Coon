@@ -1,0 +1,63 @@
+.header {
+  background-color: $dark-gray;
+  background-image: url("../img/main-cat-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.header__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 47px;
+  padding-bottom: 120px;
+}
+
+.header__logo {
+  align-self: center;
+}
+
+.header__social {
+  position: absolute;
+  bottom: 64px;
+  left: -52px;
+}
+
+.header__social::before {
+  content: "";
+  position: absolute;
+  top: -140%;
+  left: 0;
+  right: 0;
+  margin: 0 auto ;
+  width: 1px;
+  height: 77px;
+  background-color: $white;
+  opacity: 0.6;
+}
+
+.header__content {
+  margin-left: 100px;
+  width: 350px;
+}
+
+.header__city {
+  margin-top: 115px;
+  margin-bottom: 18px;
+  color: $medium-brown;
+}
+
+.header__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: $font-family-optional;
+  font-size: 52px;
+  line-height: 60px;
+}
+
+.header__description {
+  margin: 0;
+  margin-bottom: 70px;
+  width: 300px;
+  color: $medium-brown;
+}

@@ -1,0 +1,97 @@
+.breed {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.breed__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.breed__lead {
+  margin-top: 23px;
+  margin-bottom: 10px;
+  width: 735px;
+}
+
+.breed__picture {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+  }
+  &::before {
+    top: 40px;
+    left: 10px;
+    width: 630px;
+    height: 630px;
+    border: 1px solid $medium-brown;
+  }
+  &::after {
+    top: 100px;
+    left: 65px;
+    width: 520px;
+    height: 520px;
+    background-color: $deep-black;
+  }
+}
+
+.breed__picture-img {
+  display: block;
+}
+
+.breed__item {
+  position: absolute;
+  font-weight: 300;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -40px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $medium-brown;
+  }
+
+  &--cohabitation {
+    width: 280px;
+    top: 340px;
+    left: -5px;
+    text-align: right;
+  }
+
+  &--appearance {
+    width: 220px;
+    text-align: right;
+    left: 65px;
+    bottom: 150px;
+  }
+
+  &--training {
+    width: 210px;
+    right: 0;
+    bottom: 330px;
+
+    &::after {
+      right: 0;
+      left: -40px;
+    }
+  }
+
+  &--weight {
+    width: 170px;
+    right: 95px;
+    bottom: 100px;
+
+    &::after {
+      right: 0;
+      left: -40px;
+    }
+  }
+}
