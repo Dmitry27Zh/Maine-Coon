@@ -1,0 +1,85 @@
+.team {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  background-color: $deep-black;
+}
+
+.team__lead {
+  margin: 13px auto 22px;
+  margin-bottom: 22px;
+  width: 510px;
+}
+
+.team__slider-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 120px;
+}
+
+.team__slider-img {
+  z-index: 10;
+}
+
+.team__message-wrapper {
+  margin-left: -50px;
+  margin-top: 1px;
+  padding: 65px 100px;
+  border: 25px solid $deep-black;
+  border-right-width: 35px;
+  outline: 1px solid rgba($medium-brown, 0.4);
+  background-color: $dark-gray;
+}
+
+.team__message {
+  margin: 0;
+}
+
+.team__message cite {
+  font-style: normal;
+  color: $medium-brown;
+}
+
+.team__author {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.team__job {
+  display: block;
+}
+
+.team__message {
+  width: 400px;
+  background-color: $dark-gray;
+}
+
+.team__message-text {
+  margin-top: 25px;
+  margin-bottom: 45px;
+  font-weight: 300;
+}
+
+.team__slider-button {
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 30px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  opacity: 0.5;
+
+  &--prev {
+    left: 0;
+    background-image: url("../img/arrowPrev.svg");
+  }
+
+  &--next {
+    right: 0;
+    background-image: url("../img/arrowNext.svg");
+  }
+}

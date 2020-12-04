@@ -1,0 +1,60 @@
+.care {
+  padding-top: 85px;
+  padding-bottom: 100px;
+  background-image: url("../img/bg-care-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.care__list {
+  display: grid;
+  grid-template-columns: 558px 558px;
+  justify-content: space-between;
+  row-gap: 40px;
+  margin-top: 50px;
+}
+
+.care__item-link {
+  position: relative;
+  display: block;
+  padding: 40px 80px 40px 60px;
+  border: 1px solid $medium-brown;
+  color: $white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background-color: $medium-brown;
+    background-image: url("../img/arrowDetails.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $dark-gray;
+
+    &::after {
+      background-color: $dark-gray;
+    }
+  }
+}
+
+.care__item-title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $medium-brown;
+}
+
+.care__item-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+}

@@ -31,23 +31,21 @@
   line-height: 26px;
   text-align: center;
 
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: rosybrown;
-    top: 47px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 110px;
-    height: 110px;
-
-    .advantages__link--service & {
-      background-image: url("../img/svg/icon-free-vet.svg");
-    }
-  }
-
   &:hover {
     background-color: $medium-brown;
+
+    .advantages__icon {
+      fill: $white;
+    }
   }
+}
+
+.advantages__icon {
+  position: absolute;
+  top: 47px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 110px;
+  height: 110px;
 }

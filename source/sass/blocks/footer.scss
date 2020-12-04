@@ -1,0 +1,41 @@
+.footer {
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background-color: $deep-black;
+}
+
+.footer__logo {
+  margin-right: 125px;
+
+  &:hover,
+  &:focus {
+    .footer__logo-icon {
+      fill: $white;
+    }
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__social-link {
+  &:hover,
+  &:focus {
+    .footer__social-icon {
+      fill: $white;
+    }
+  }
+}
+
+.footer__address {
+  margin-left: 160px;
+  margin-right: 68px;
+  color: rgba($warm-white, 0.8);
+}
+
+.footer__tel {
+  color: $warm-white;
+}
