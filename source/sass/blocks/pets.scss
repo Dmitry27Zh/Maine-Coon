@@ -10,7 +10,10 @@
 }
 
 .pets__lead {
-  width: 516px;
+  @media (min-width: $desktop-width) {
+    width: 516px;
+  }
+
   margin-top: 23px;
   margin-bottom: 38px;
 }
@@ -38,10 +41,12 @@
 }
 
 .pets__slider {
-  display: grid;
-  column-gap: 35px;
-  grid-template-columns: max-content max-content;
-  grid-template-rows: min-content min-content;
+  @media (min-width: $desktop-width) {
+    display: grid;
+    column-gap: 35px;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: min-content min-content;
+  }
 }
 
 .pets__slider-item {

@@ -5,7 +5,9 @@
 }
 
 .footer__logo {
-  margin-right: 125px;
+  @media (min-width: $desktop-width) {
+    margin-right: 125px;
+  }
 
   &:hover,
   &:focus {
@@ -31,8 +33,11 @@
 }
 
 .footer__address {
-  margin-left: 160px;
-  margin-right: 68px;
+  @media (min-width: $desktop-width) {
+    margin-left: 160px;
+    margin-right: 68px;
+  }
+
   color: rgba($warm-white, 0.8);
 }
 

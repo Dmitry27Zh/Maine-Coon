@@ -9,8 +9,10 @@
 }
 
 .faq__list {
-  padding-left: 276px;
-  padding-right: 115px;
+  @media (min-width: $desktop-width) {
+    padding-left: 276px;
+    padding-right: 115px;
+  }
 }
 
 .faq__item {

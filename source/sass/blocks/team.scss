@@ -7,14 +7,20 @@
 .team__lead {
   margin: 13px auto 22px;
   margin-bottom: 22px;
-  width: 510px;
+
+  @media (min-width: $desktop-width) {
+    width: 510px;
+  }
 }
 
 .team__slider-item {
   position: relative;
-  display: flex;
-  align-items: flex-start;
-  padding-left: 120px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 120px;
+  }
 }
 
 .team__slider-img {
@@ -53,7 +59,10 @@
 }
 
 .team__message {
-  width: 400px;
+  @media (min-width: $desktop-width) {
+    width: 400px;
+  }
+
   background-color: $dark-gray;
 }
 

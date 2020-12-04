@@ -26,8 +26,10 @@
 }
 
 .reviews__text {
-  padding: 110px 90px 110px 140px;
-  width: 403px;
+  @media (min-width: $desktop-width) {
+    padding: 110px 90px 110px 140px;
+    width: 403px;
+  }
   background-color: $deep-black;
 }
 

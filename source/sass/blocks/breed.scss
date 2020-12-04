@@ -13,7 +13,14 @@
 .breed__lead {
   margin-top: 23px;
   margin-bottom: 10px;
-  width: 735px;
+
+  @media (min-width: $tablet-width) {
+    width: 443px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 735px;
+  }
 }
 
 .breed__picture {
@@ -28,15 +35,33 @@
   &::before {
     top: 40px;
     left: 10px;
-    width: 630px;
-    height: 630px;
+
+    @media (min-width: $tablet-width) {
+      width: 420px;
+      height: 420px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 630px;
+      height: 630px;
+    }
+
     border: 1px solid $medium-brown;
   }
   &::after {
     top: 100px;
     left: 65px;
-    width: 520px;
-    height: 520px;
+
+    @media (min-width: $tablet-width) {
+      width: 340px;
+      height: 340px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 520px;
+      height: 520px;
+    }
+
     background-color: $deep-black;
   }
 }

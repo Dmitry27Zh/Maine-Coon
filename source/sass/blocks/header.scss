@@ -1,16 +1,34 @@
 .header {
   background-color: $dark-gray;
-  background-image: url("../img/main-cat-desktop@1x.png");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: bottom right;
+  background-image: url("../img/main-cat-mobile@1x.png");
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/main-cat-tablet@1x.png");
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/main-cat-desktop@1x.png");
+    background-position: top right;
+  }
 }
 
 .header__wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 47px;
-  padding-bottom: 120px;
+  padding-top: 27px;
+  padding-bottom: 276px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 47px;
+    padding-bottom: 120px;
+  }
 }
 
 .header__logo {
@@ -25,16 +43,27 @@
 }
 
 .header__social {
-  position: absolute;
-  bottom: 64px;
-  left: -52px;
-  flex-direction: column;
-  align-items: center;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 64px;
+    left: -52px;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.header__social-item {
-  &:not(:last-child) {
-    margin-right: 0;
+@media (min-width: $desktop-width) {
+  .header__social-item {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -56,12 +85,28 @@
 }
 
 .header__content {
-  margin-left: 100px;
-  width: 350px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 350px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 100px;
+  }
 }
 
 .header__city {
-  margin-top: 115px;
+  margin-top: 57px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 95px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 115px;
+  }
   margin-bottom: 18px;
   color: $medium-brown;
 }
@@ -70,13 +115,27 @@
   margin: 0;
   margin-bottom: 30px;
   font-family: $font-family-optional;
-  font-size: 52px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 42px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 52px;
+    line-height: 60px;
+  }
 }
 
 .header__description {
   margin: 0;
-  margin-bottom: 70px;
-  width: 300px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+
   color: $medium-brown;
 }

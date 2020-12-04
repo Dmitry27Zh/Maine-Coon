@@ -10,17 +10,22 @@
 }
 
 .advantages__list {
-  display: flex;
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .advantages__item {
-  width: 360px;
-  padding: 17px 20px;
-  background-color: $medium-gray;
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    padding: 17px 20px;
 
-  &:not(:last-child) {
-    margin-right: 40px;
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
   }
+
+  background-color: $medium-gray;
 }
 
 .advantages__link {
