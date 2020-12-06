@@ -71,20 +71,24 @@
             <a href="#" class="pets__tab">Котята</a>
           </li>
         </ul>
-        <ul class="pets__slider slider__list">
-          <li class="pets__slider-item pets__slider-item--top slider__slide">
-            <img class="pets__slider-img pets__slider-img--top" src="./img/pets-list-1-desktop@1x.png" width="519"
-              height="320" alt="Мейн Кун">
-          </li>
-          <li class="pets__slider-item pets__slider-item--bottom slider__slide">
-            <img class="pets__slider-img" src="./img/pets-list-2-desktop@1x.png" width="519" height="241"
-              alt="Мейн Кун">
-          </li>
-          <li class="pets__slider-item pets__slider-item--big slider__slide">
-            <img class="pets__slider-img" src="./img/pets-list-3-desktop@1x.png" width="469" height="483"
-              alt="Мейн Кун">
-          </li>
-        </ul>
+        <div class="pets__slider slider">
+          <ul class="pets__slider-list slider__list">
+            <li class="pets__slider-item pets__slider-item--top slider__slide">
+              <img class="pets__slider-img pets__slider-img--top" src="./img/pets-list-1-desktop@1x.png" width="519"
+                height="320" alt="Мейн Кун">
+            </li>
+            <li class="pets__slider-item pets__slider-item--bottom slider__slide">
+              <img class="pets__slider-img" src="./img/pets-list-2-desktop@1x.png" width="519" height="241"
+                alt="Мейн Кун">
+            </li>
+            <li class="pets__slider-item pets__slider-item--big slider__slide">
+              <img class="pets__slider-img pets__slider-img--big" src="./img/pets-list-3-desktop@1x.png" width="469" height="483"
+                alt="Мейн Кун">
+            </li>
+          </ul>
+          <button class="pets__slider-button slider__button slider__button--prev"></button>
+          <button class="pets__slider-button slider__button slider__button--next"></button>
+        </div>
         <a href="#" class="pets__button button">Смотреть больше</a>
       </div>
     </section>
@@ -458,8 +462,8 @@
               </div>
             </li>
           </ul>
-          <button class="team__slider-button team__slider-button--prev"></button>
-          <button class="team__slider-button team__slider-button--next"></button>
+          <button class="slider__button slider__button--prev"></button>
+          <button class="slider__button slider__button--next"></button>
         </div>
       </div>
     </section>

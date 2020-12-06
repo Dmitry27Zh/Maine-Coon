@@ -1,6 +1,15 @@
 .pets {
-  padding-top: 220px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 45px;
+  }
+  @media (min-width: $desktop-width) {
+    padding-top: 220px;
+    padding-bottom: 40px;
+  }
 }
 
 .pets__wrapper {
@@ -41,6 +50,16 @@
 }
 
 .pets__slider {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.pets__slider-list {
+  position: relative;
+  padding: 0 28px;
   @media (min-width: $desktop-width) {
     display: grid;
     column-gap: 35px;
@@ -50,11 +69,42 @@
 }
 
 .pets__slider-item {
+  display: none;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    &:not(&--big) {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+
+    &--top {
+      left: -40px;
+    }
+
+    &--bottom {
+      right: -40px;
+    }
+  }
+
+  &--top {
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
   &--bottom {
     grid-column: 1;
     margin-top: auto;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
   }
-  &--big{
+  &--big {
+    display: block;
     grid-column: 2;
     grid-row: 1 / -1;
   }
@@ -65,6 +115,19 @@
   object-fit: cover;
   &--top {
     height: 214px;
+  }
+
+  &:not(&--big) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      height: 200px;
+    }
+  }
+}
+
+.pets__slider-button {
+  opacity: 1;
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
