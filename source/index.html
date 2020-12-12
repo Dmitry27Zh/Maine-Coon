@@ -97,17 +97,22 @@
         <h2 class="section-title breed__title">Особенности породы</h2>
         <p class="section-lead breed__lead">Мейн-Кун - это порода, которая вызывает к себе уважение. Приобретая в свой
           дом этого питомца, вы получите умное животное, которому нет равных </p>
-        <div class="breed__picture">
-          <img class="breed__picture-img" src="./img/breed-features-desktop@1x.png" width="602" height="655"
-            alt="Изображение породы">
+        <div class="breed__inner">
+          <div class="breed__picture">
+            <picture>
+              <source media="(max-width: 767px)" srcset="./img/breed-features-mobile@1x.png 1x, ./img/breed-features-mobile@2x.png 2x">
+              <source media="(max-width: 1365px)" srcset="./img/breed-features-tablet@1x.png 1x, ./img/breed-features-tablet@2x.png">
+              <img class="breed__picture-img" src="./img/breed-features-desktop@1x.png" alt="Изображение породы">
+            </picture>
+          </div>
+          <ul class="breed__list">
+            <li class="breed__item breed__item--cohabitation">Легко уживается в семьях с детьми или другими животными</li>
+            <li class="breed__item breed__item--training">Выполняет команды как дрессированная собака</li>
+            <li class="breed__item breed__item--appearance">Внешний вид этой кошки похож на дикую рысь</li>
+            <li class="breed__item breed__item--weight">Вес может достигать 12 кг, а длина 1 м</li>
+          </ul>
         </div>
-        <ul class="breed__list">
-          <li class="breed__item breed__item--cohabitation">Легко уживается в семьях с детьми или другими животными</li>
-          <li class="breed__item breed__item--training">Выполняет команды как дрессированная собака</li>
-          <li class="breed__item breed__item--appearance">Внешний вид этой кошки похож на дикую рысь</li>
-          <li class="breed__item breed__item--weight">Вес может достигать 12 кг, а длина 1 м</li>
-        </ul>
-      </div>
+        </div>
     </section>
     <section class="advantages">
       <div class="advantages__wrapper wrapper">

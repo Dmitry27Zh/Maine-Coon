@@ -369,9 +369,11 @@ img {
 .breed {
   padding-top: 40px;
   padding-bottom: 100px; }
+  @media (max-width: 1365px) {
+    .breed {
+      padding-top: 45px; } }
 
 .breed__wrapper {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -385,6 +387,9 @@ img {
   @media (min-width: 1366px) {
     .breed__lead {
       width: 735px; } }
+
+.breed__inner {
+  position: relative; }
 
 .breed__picture {
   position: relative; }
@@ -400,7 +405,8 @@ img {
     @media (min-width: 768px) {
       .breed__picture::before {
         width: 420px;
-        height: 420px; } }
+        height: 420px;
+        left: -16px; } }
     @media (min-width: 1366px) {
       .breed__picture::before {
         width: 630px;
@@ -412,11 +418,15 @@ img {
     @media (min-width: 768px) {
       .breed__picture::after {
         width: 340px;
-        height: 340px; } }
+        height: 340px;
+        top: 84px;
+        left: 26px; } }
     @media (min-width: 1366px) {
       .breed__picture::after {
         width: 520px;
-        height: 520px; } }
+        height: 520px;
+        top: 100px;
+        left: 39px; } }
 
 .breed__picture-img {
   display: block; }
@@ -427,35 +437,59 @@ img {
   .breed__item::after {
     content: "";
     position: absolute;
-    right: -40px;
+    top: 0;
+    right: -30px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color: #a07b50; }
+    @media (max-width: 1365px) {
+      .breed__item::after {
+        right: -30px; } }
   .breed__item--cohabitation {
     width: 280px;
-    top: 340px;
-    left: -5px;
+    top: 220px;
+    left: -290px;
     text-align: right; }
+    @media (max-width: 1365px) {
+      .breed__item--cohabitation {
+        width: 150px;
+        top: 140px;
+        left: -160px; } }
   .breed__item--appearance {
     width: 220px;
     text-align: right;
-    left: 65px;
+    left: -240px;
     bottom: 150px; }
+    @media (max-width: 1365px) {
+      .breed__item--appearance {
+        width: 150px;
+        bottom: 10px;
+        left: -155px; } }
   .breed__item--training {
     width: 210px;
-    right: 0;
-    bottom: 330px; }
+    right: -245px;
+    bottom: 285px; }
     .breed__item--training::after {
       right: 0;
-      left: -40px; }
+      left: -30px; }
+    @media (max-width: 1365px) {
+      .breed__item--training {
+        width: 132px;
+        right: -160px;
+        bottom: 120px; } }
   .breed__item--weight {
     width: 170px;
-    right: 95px;
-    bottom: 100px; }
+    right: -160px;
+    bottom: 95px; }
     .breed__item--weight::after {
       right: 0;
-      left: -40px; }
+      left: -30px; }
+    @media (max-width: 1365px) {
+      .breed__item--weight {
+        width: 115px;
+        right: -90px;
+        bottom: -15px; } }
 
 .advantages {
   padding-top: 80px;
