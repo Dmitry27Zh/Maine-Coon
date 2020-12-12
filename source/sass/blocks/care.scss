@@ -8,22 +8,34 @@
 
 .care__list {
   display: grid;
+  margin-top: 40px;
+  row-gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 558px;
+    justify-content: center;
+    row-gap: 23px;
+  }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 558px 558px;
+    justify-content: space-between;
+    row-gap: 40px;
+    margin-top: 50px;
   }
-
-  justify-content: space-between;
-  row-gap: 40px;
-  margin-top: 50px;
 }
 
 .care__item-link {
   position: relative;
   display: block;
-  padding: 40px 80px 40px 60px;
+  padding: 25px 100px 25px 25px;
+
   border: 1px solid $medium-brown;
   color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 80px 40px 60px;
+  }
 
   &::after {
     content: "";

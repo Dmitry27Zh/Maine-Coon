@@ -14,17 +14,21 @@
 
   &--prev {
     left: 0;
+
     @media (min-width: $tablet-width) {
       transform: translateX(-100%);
     }
+
     background-image: url("../img/arrowPrev.svg");
   }
 
   &--next {
     right: 0;
+
     @media (min-width: $tablet-width) {
       transform: translateX(100%);
     }
+
     background-image: url("../img/arrowNext.svg");
   }
 }

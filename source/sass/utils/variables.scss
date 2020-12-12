@@ -14,6 +14,5 @@ $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1366px;
 
-$mobile-width-only: (768 - 1)px;
+$mobile-width-only: 768px - 1px;
 $tablet-width-only: 1366px - 1px;
-

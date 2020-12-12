@@ -2,8 +2,12 @@
   padding-top: 40px;
   padding-bottom: 100px;
 
-  @media(max-width: $tablet-width-only) {
+  @media (max-width: $tablet-width-only) {
     padding-top: 45px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 60px;
   }
 }
 
@@ -16,6 +20,7 @@
 .breed__lead {
   margin-top: 23px;
   margin-bottom: 10px;
+  width: 270px;
 
   @media (min-width: $tablet-width) {
     width: 443px;
@@ -28,10 +33,21 @@
 
 .breed__inner {
   position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .breed__picture {
   position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    align-self: center;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -39,9 +55,12 @@
     z-index: -1;
     border-radius: 50%;
   }
+
   &::before {
     top: 40px;
-    left: 10px;
+    left: -16px;
+    width: 280px;
+    height: 280px;
 
     @media (min-width: $tablet-width) {
       width: 420px;
@@ -56,9 +75,12 @@
 
     border: 1px solid $medium-brown;
   }
+
   &::after {
-    top: 100px;
-    left: 65px;
+    width: 230px;
+    height: 230px;
+    top: 67px;
+    left: 12px;
 
     @media (min-width: $tablet-width) {
       width: 340px;
@@ -82,82 +104,117 @@
   display: block;
 }
 
+.breed__list {
+  @media (max-width: $mobile-width-only) {
+    margin-top: 63px;
+  }
+}
+
 .breed__item {
-  position: absolute;
+  position: relative;
   font-weight: 300;
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+  }
 
   &::after {
     content: "";
     position: absolute;
     top: 0;
-    right: -30px;
-    width: 15px;
-    height: 15px;
+    left: 0;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: $medium-brown;
 
-    @media (max-width: $tablet-width-only) {
+    @media (min-width: $tablet-width) {
+      width: 15px;
+      height: 15px;
+      left: auto;
       right: -30px;
     }
   }
 
   &--cohabitation {
-    width: 280px;
-    top: 220px;
-    left: -290px;
-    text-align: right;
-
-    @media (max-width: $tablet-width-only) {
+    @media (min-width: $tablet-width) {
       width: 150px;
       top: 140px;
       left: -160px;
+      text-align: right;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 280px;
+      top: 220px;
+      left: -290px;
     }
   }
 
   &--appearance {
-    width: 220px;
-    text-align: right;
-    left: -240px;
-    bottom: 150px;
-
-    @media (max-width: $tablet-width-only) {
+    @media (min-width: $tablet-width) {
       width: 150px;
       bottom: 10px;
       left: -155px;
+      text-align: right;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 220px;
+      left: -240px;
+      bottom: 150px;
     }
   }
 
   &--training {
-    width: 210px;
-    right: -245px;
-    bottom: 285px;
-
     &::after {
-      right: 0;
-      left: -30px;
+      @media (min-width: $tablet-width) {
+        right: 0;
+        left: -30px;
+      }
     }
 
-    @media (max-width: $tablet-width-only) {
+    @media (min-width: $tablet-width) {
       width: 132px;
       right: -160px;
       bottom: 120px;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 210px;
+      right: -245px;
+      bottom: 285px;
+    }
   }
 
   &--weight {
-    width: 170px;
-    right: -160px;
-    bottom: 95px;
-
     &::after {
-      right: 0;
-      left: -30px;
+      @media (min-width: $tablet-width) {
+        right: 0;
+        left: -30px;
+      }
     }
 
-    @media (max-width: $tablet-width-only) {
+    @media (min-width: $tablet-width) {
       width: 115px;
       right: -90px;
       bottom: -15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 170px;
+      right: -160px;
+      bottom: 95px;
     }
   }
 }

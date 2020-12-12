@@ -2,6 +2,15 @@
   padding-top: 80px;
   padding-bottom: 70px;
   background-color: $deep-black;
+
+  @media (max-width: $tablet-width-only) {
+    padding-bottom: 190px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .team__lead {
@@ -25,20 +34,56 @@
 
 .team__slider-img {
   z-index: 10;
+
+  @media (max-width: $tablet-width-only) {
+    position: absolute;
+    right: 56px;
+    bottom: -95px;
+    width: 208px;
+    height: 208px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    top: -63px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 126px;
+    height: 126px;
+  }
 }
 
 .team__message-wrapper {
-  margin-left: -50px;
   margin-top: 1px;
   padding: 65px 100px;
   border: 25px solid $deep-black;
   border-right-width: 35px;
   outline: 1px solid rgba($medium-brown, 0.4);
   background-color: $dark-gray;
+
+  @media (min-width: $desktop-width) {
+    margin-left: -50px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 103px;
+    border: none;
+    outline: none;
+    padding: 88px 10px 60px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .team__message {
   margin: 0;
+
+  @media (min-width: $desktop-width) {
+    width: 400px;
+  }
+
+  background-color: $dark-gray;
 }
 
 .team__message cite {
@@ -58,10 +103,43 @@
   display: block;
 }
 
-.team__message {
-  @media (min-width: $desktop-width) {
-    width: 400px;
+.team__message-text {
+  font-weight: 300;
+  color: rgba($white, 0.7);
+}
+
+.team__social {
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.team__slider-button {
+  @media (max-width: $tablet-width-only) {
+    top: auto;
+    left: auto;
+    bottom: -95px;
+
+    &--prev {
+      right: 280px;
+    }
+
+    &--next {
+      right: 30px;
+    }
   }
 
-  background-color: $dark-gray;
+  @media (max-width: $mobile-width-only) {
+    bottom: auto;
+    top: -20px;
+
+    &--prev {
+      left: 18%;
+    }
+
+    &--next {
+      right: 18%;
+    }
+  }
 }

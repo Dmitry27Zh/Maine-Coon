@@ -16,12 +16,29 @@
 }
 
 .advantages__item {
-  @media (min-width: $desktop-width) {
-    width: 360px;
+  margin: 0 auto;
+  padding: 15px;
+  width: 260px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 320px;
     padding: 17px 20px;
 
     &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+
+    &:not(:last-child) {
       margin-right: 40px;
+      margin-bottom: 0;
     }
   }
 
@@ -35,6 +52,12 @@
   color: $white;
   line-height: 26px;
   text-align: center;
+  font-weight: 300;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 
   &:hover {
     background-color: $medium-brown;
