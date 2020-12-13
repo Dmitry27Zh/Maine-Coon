@@ -122,6 +122,7 @@ img {
   top: 50%;
   width: 15px;
   height: 30px;
+  padding: 0;
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
@@ -879,14 +880,29 @@ img {
 
 .reviews {
   padding-bottom: 112px; }
+  @media (max-width: 1365px) {
+    .reviews {
+      padding-bottom: 87px; } }
 
-.reviews__list {
+.reviews__slider-list {
   margin-top: 58px; }
+  @media (max-width: 1365px) {
+    .reviews__slider-list {
+      margin-top: 143px;
+      padding-left: 9%;
+      padding-right: 7%; } }
+  @media (max-width: 767px) {
+    .reviews__slider-list {
+      padding: 0; } }
 
 .reviews__item {
   display: flex;
   align-items: center;
   padding-left: 120px; }
+  @media (max-width: 1365px) {
+    .reviews__item {
+      display: block;
+      padding: 0; } }
 
 .reviews__img-wrapper {
   margin-right: -100px;
@@ -894,6 +910,19 @@ img {
 
 .reviews__img {
   display: block; }
+  @media (max-width: 1365px) {
+    .reviews__img {
+      position: absolute;
+      top: -95px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 302px;
+      height: 208px; } }
+  @media (max-width: 767px) {
+    .reviews__img {
+      width: 242px;
+      height: 166px; } }
 
 .reviews__text-wrapper {
   margin: 0; }
@@ -904,6 +933,13 @@ img {
     .reviews__text {
       padding: 110px 90px 110px 140px;
       width: 403px; } }
+  @media (max-width: 1365px) {
+    .reviews__text {
+      padding: 148px 85px 33px;
+      text-align: center; } }
+  @media (max-width: 767px) {
+    .reviews__text {
+      padding: 118px 30px 40px; } }
 
 .reviews__author {
   font-size: 24px;
@@ -914,7 +950,8 @@ img {
   margin-top: 20px;
   margin-bottom: 40px;
   font-size: 14px;
-  font-weight: 300; }
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7); }
 
 .reviews__info {
   display: flex;
@@ -922,6 +959,10 @@ img {
   font-size: 12px;
   line-height: 18px;
   color: #a07b50; }
+  @media (max-width: 1365px) {
+    .reviews__info {
+      display: flex;
+      justify-content: center; } }
 
 .reviews__social-list {
   margin-left: 40px;
@@ -937,14 +978,54 @@ img {
     .reviews__social-item:hover .reviews__social-icon, .reviews__social-item:focus .reviews__social-icon {
       fill: #ffffff; }
 
+@media (max-width: 1365px) {
+  .reviews__slider-button {
+    top: 39px;
+    width: 59px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .reviews__slider-button--prev {
+      left: 15%;
+      background-image: url("../../img/arrowPrevLong.svg"); }
+    .reviews__slider-button--next {
+      right: 15%;
+      background-image: url("../../img/arrowNextLong.svg"); } }
+
+@media (max-width: 767px) {
+  .reviews__slider-button {
+    width: 15px;
+    height: 19px; }
+    .reviews__slider-button--prev {
+      left: 0;
+      background-image: url("../../img/arrowPrev.svg"); }
+    .reviews__slider-button--next {
+      right: 0;
+      background-image: url("../../img/arrowNext.svg"); } }
+
 .footer {
-  padding-top: 68px;
-  padding-bottom: 68px;
+  padding: 68px 0;
   background-color: #151313; }
+  @media (max-width: 1365px) {
+    .footer {
+      font-size: 14px; } }
+  @media (max-width: 767px) {
+    .footer {
+      padding: 40px 0;
+      line-height: 20px; } }
 
 @media (min-width: 1366px) {
   .footer__logo {
     margin-right: 125px; } }
+
+@media (max-width: 1365px) {
+  .footer__logo {
+    display: none; } }
+
+@media (max-width: 767px) {
+  .footer__logo {
+    display: block;
+    margin-top: 26px; } }
 
 .footer__logo:hover .footer__logo-icon, .footer__logo:focus .footer__logo-icon {
   fill: #ffffff; }
@@ -953,6 +1034,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 1365px) {
+    .footer__wrapper {
+      justify-content: space-between; } }
+  @media (max-width: 767px) {
+    .footer__wrapper {
+      flex-direction: column-reverse; } }
+
+@media (max-width: 767px) {
+  .footer__social {
+    margin-top: 26px; } }
 
 .footer__social-link:hover .footer__social-icon, .footer__social-link:focus .footer__social-icon {
   fill: #ffffff; }
@@ -963,6 +1054,12 @@ img {
     .footer__address {
       margin-left: 160px;
       margin-right: 68px; } }
+  @media (max-width: 1365px) {
+    .footer__address {
+      margin: 0; } }
+  @media (max-width: 767px) {
+    .footer__address {
+      margin-top: 26px; } }
 
 .footer__tel {
   color: #fdf2e6; }
